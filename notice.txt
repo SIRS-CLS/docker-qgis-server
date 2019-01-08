@@ -1,0 +1,11 @@
+# Build dockerfile
+docker build -t opensuse/qgisserver:0.1  https://github.com/SIRS-CLS/docker-qgis-server.git#master
+
+# Connect to docker hub
+docker login --username=docker_hub_name
+
+# Tag an untagged image
+docker tag bb38976d03cf yourhubusername/verse_gapminder:firsttry
+
+# Push image to docker hub
+docker push yourhubusername/verse_gapminder
