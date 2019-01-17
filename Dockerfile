@@ -31,7 +31,6 @@ ADD qgis-server.conf /etc/apache2/vhosts.d/qgis-server.conf
 
 #Setting up Apache
 RUN export LC_ALL="C" && a2enmod fcgid
-RUN a2dissite 000-default
 RUN a2ensite qgis-server
 EXPOSE 80
 ADD start.sh /start.sh
